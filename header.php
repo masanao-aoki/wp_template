@@ -27,8 +27,8 @@
 <body <?php body_class(); ?>>
 
 	<header role="banner">
-		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Nanaの7乗!</a></h1>
-		<p>エオルゼアで7乗楽しむ為に!</p>
+		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">■■■■</a></h1>
+		<p>■■■■</p>
 		<nav role="navigation">
 			<ul>
 				<li><a>about</a></li>
