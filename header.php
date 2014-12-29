@@ -16,26 +16,24 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
 <!--[if lt IE 9]>
   <script src="/js/html5shiv.min.js"></script>
 <![endif]-->
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/common.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
 
-<header role="banner">
-	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Nanaの7乗!</a></h1>
-	<p>エオルゼアで7乗楽しむ為に奮闘中！</p>
-	<nav role="navigation">
-		<ul>
-			<li><a>about</a></li>
-			<li><a>profile</a></li>
-		</ul>
-	</nav>
-	<button data-role="search-switch">検索</button>
-	<div data-role="search-box">
-		<?php get_search_form(); ?>
-	</div>
-</header>
+	<header role="banner">
+		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Nanaの7乗!</a></h1>
+		<p>エオルゼアで7乗楽しむ為に!</p>
+		<nav role="navigation">
+			<ul>
+				<li><a>about</a></li>
+				<li><a>profile</a></li>
+			</ul>
+		</nav>
+	</header>
 
-	<div id="main" class="site-main">
