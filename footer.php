@@ -33,10 +33,6 @@ $categories=get_categories($args);
 </div>
 
 
-<div data-role="search-box">
-	<?php get_search_form(); ?>
-</div>
-
 <p><small>copyright&copy;<?php bloginfo('name'); ?> All rights reserved.</small></p>
 </footer>
 </body>

@@ -1,5 +1,26 @@
 <?php get_header(); ?>
 	<main role="main">
+	<?php
+		$s = $_GET['s'];
+		$catnum = $_GET['catnum'];
+
+		//tax_query用
+		if($catnum){
+		    $taxquerysp[] = array(
+		            'taxonomy'=>'category',
+		            'terms'=> $catnum,
+		            'include_children'=>false,
+		            'field'=>'term_id',
+		            'operator'=>'AND'
+		            );
+		}
+		query_posts( array(
+		    'tax_query' => $taxquerysp,
+		    's' => $s,
+		    )
+		);
+	?>
+	<?php query_posts("post_type=post"); ?>
 		<?php if(have_posts()):while(have_posts()):the_post(); ?>
 		<article>
 			<header>
