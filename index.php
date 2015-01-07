@@ -13,7 +13,16 @@
 			<div data-role="text"><?php the_content('続きを読む&raquo;'); ?></div>
 		</article>
 		<?php endwhile;endif; ?>
-		<nav>
+		<?php
+				if ( $wp_query -> max_num_pages > 1 ) : ?>
+					<div class="navigation">
+						<div class="alignleft"><?php next_posts_link('&laquo; PREV'); ?></div>
+						<div class="alignright"><?php previous_posts_link('NEXT &raquo;'); ?></div>
+					</div>
+				<?php
+				endif;
+				?>
+		<nav id="nav-below">
 			<ul>
 				<li class="previous_page"><?php previous_posts_link('prev'); ?></li>
 				<li class="next_page"><?php next_posts_link('next'); ?></li>

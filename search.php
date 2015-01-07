@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 	<main role="main">
+	<?php query_posts("post_type=post"); ?>
 	<?php
 		$s = $_GET['s'];
 		$catnum = $_GET['catnum'];
@@ -20,7 +21,6 @@
 		    )
 		);
 	?>
-	<?php query_posts("post_type=post"); ?>
 		<?php if(have_posts()):while(have_posts()):the_post(); ?>
 		<article>
 			<header>
