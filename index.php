@@ -19,7 +19,28 @@
 		?>
 		<article>
 			<header>
-				<h2><?php if($url): ?><a href="<?php echo $url; ?>" target="_blank"><?php endif ?><?php the_title(); ?><?php if($url): ?></a><?php endif ?></h2>
+				<h2><?php if($url): ?><a href="<?php echo $url; ?>" target="_blank" onClick="ga('send', 'event', 'Link', 'click', '<?php the_title(); ?>');"><?php endif ?><?php the_title(); ?><?php if($url): ?></a><?php endif ?></h2>
+				<ul data-role="color">
+			<?php
+			 $cats = get_the_category();
+			 foreach ($cats as $cat) {
+		 		if( $cat->parent == 17 ) {
+		 		echo '<li><a href="' . get_category_link($cat->cat_ID) . '" onClick="ga(\'send\', \'event\', \'color\', \'click\', '.$cat->cat_name.');">'.$cat->cat_name."</a></li>";
+		  		}
+			 }
+			?>
+			</ul>
+			<ul data-role="type">
+			<?php
+			 $cats = get_the_category();
+			 foreach ($cats as $cat) {
+		 		if( $cat->parent == 18 ) {
+		 		echo '<li><a href="' . get_category_link($cat->cat_ID) . '" onClick="ga(\'send\', \'event\', \'type\', \'click\', '.$cat->cat_name.');">'.$cat->cat_name."</a></li>";
+		  		}
+			 }
+			?>
+			</ul>
+			<?php the_tags('<ul data-role="tag"><li>','</li><li>','</li></ul>'); ?>
 			</header>
 			<?php if($main_img): ?>
 			<ul data-role="article-thum">
@@ -43,27 +64,6 @@
 			<?php else: ?>
 			<p data-role="noimg">No img</p>
 			<?php endif ?>
-			<ul data-role="color">
-			<?php
-			 $cats = get_the_category();
-			 foreach ($cats as $cat) {
-		 		if( $cat->parent == 17 ) {
-		 		echo '<li><a href="' . get_category_link($cat->cat_ID) . '">'.$cat->cat_name."</a></li>";
-		  		}
-			 }
-			?>
-			</ul>
-			<ul data-role="type">
-			<?php
-			 $cats = get_the_category();
-			 foreach ($cats as $cat) {
-		 		if( $cat->parent == 18 ) {
-		 		echo '<li><a href="' . get_category_link($cat->cat_ID) . '">'.$cat->cat_name."</a></li>";
-		  		}
-			 }
-			?>
-			</ul>
-			<?php the_tags('<ul data-role="tag"><li>','</li><li>','</li></ul>'); ?>
 		</article>
 		<?php endwhile;endif; ?>
 		<?php

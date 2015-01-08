@@ -5,14 +5,40 @@ body {
 	background: #ccc;
  }
 
-[role="main"] article {
+[role="main"] > article {
 	float: left;
+	overflow: hidden;
+	position: relative;
 	width: 200px;
-	padding: 15px;
 	margin: 10px;
 	border: 1px solid #ddd;
  }
 
-[role="main"] article img {
+[role="main"] > article header {
+	position: absolute;
+	top: -200px;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	background: rgba(0,0,0,.8);
+	text-align: center;
+	z-index: 9999;
+ }
+
+[role="main"] > article header h2 {
+	margin: 90px 0 10px 0;
+ }
+
+[role="main"] > article header h2 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+[role="main"] > article figure img {
 	width: 100%;
 }
+
+[role="main"] > article figure figcaption {
+	display: none;
+ }
