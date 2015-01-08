@@ -1,8 +1,7 @@
 <form method="get" action="<?php bloginfo( 'url' ); ?>">
-    <p>検索</p>
-    <input name="s" id="s" type="text" />
+    <input name="s" id="s" type="hidden" />
     <nav>
-        <h4>color</h4>
+        <h2>color</h2>
         <ul>
         <?php
         $cats = get_categories('child_of=17');
@@ -15,7 +14,7 @@
         </ul>
     </nav>
     <nav>
-        <h4>type</h4>
+        <h2>type</h2>
         <ul>
         <?php
         $cats = get_categories('child_of=18');

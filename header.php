@@ -17,11 +17,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style.css">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/slick/slick.css">
 <!--[if lt IE 9]>
   <script src="/js/html5shiv.min.js"></script>
 <![endif]-->
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/common.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/slick/slick.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
