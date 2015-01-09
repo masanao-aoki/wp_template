@@ -38,4 +38,4 @@
 			</ul>
 		</nav>
 	</header>
-
+	<?php include( TEMPLATEPATH . '/gnav.php' ); ?>

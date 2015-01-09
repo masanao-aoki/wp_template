@@ -1,4 +1,3 @@
-<div id="side">
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-<?php endif; ?>
+<div data-role="sidebar">
+<p>aaaaaaaa</p>
 </div>
