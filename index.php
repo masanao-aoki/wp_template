@@ -17,6 +17,7 @@
 		$thum_img5 = wp_get_attachment_image_src(post_custom('thum_img5'),'medium' );
 		$thum_img5_cap = post_custom('thum_img5_cap');
 		?>
+
 		<article>
 			<header>
 				<h2><?php if($url): ?><a href="<?php echo $url; ?>" target="_blank" onClick="ga('send', 'event', 'Link', 'click', '<?php the_title(); ?>');"><?php endif ?><?php the_title(); ?><?php if($url): ?></a><?php endif ?></h2>
@@ -42,28 +43,7 @@
 			</ul>
 			<?php the_tags('<ul data-role="tag"><li>','</li><li>','</li></ul>'); ?>
 			</header>
-			<?php if($main_img): ?>
-			<ul data-role="article-thum">
-				<li><figure><img src="<?php echo $main_img[0]; ?>" alt="<?php the_title(); ?>"><?php if($main_img_cap): ?><figcaption><?php echo $main_img_cap; ?></figcaption><?php endif; ?></figure></li>
-				<?php if($thum_img1): ?>
-				<li><figure><img src="<?php echo $thum_img1[0]; ?>" alt="<?php the_title(); ?>_サムネイル"><?php if($thum_img1_cap): ?><figcaption><?php echo $thum_img1_cap; ?></figcaption><?php endif; ?></figure></li>
-				<?php endif ?>
-				<?php if($thum_img2): ?>
-				<li><figure><img src="<?php echo $thum_img2[0]; ?>" alt="<?php the_title(); ?>_サムネイル"><?php if($thum_img2_cap): ?><figcaption><?php echo $thum_img2_cap; ?></figcaption><?php endif; ?></figure></li>
-				<?php endif ?>
-				<?php if($thum_img3): ?>
-				<li><figure><img src="<?php echo $thum_img3[0]; ?>" alt="<?php the_title(); ?>_サムネイル"><?php if($thum_img3_cap): ?><figcaption><?php echo $thum_img3_cap; ?></figcaption><?php endif; ?></figure></li>
-				<?php endif ?>
-				<?php if($thum_img4): ?>
-				<li><figure><img src="<?php echo $thum_img4[0]; ?>" alt="<?php the_title(); ?>_サムネイル"><?php if($thum_img4_cap): ?><figcaption><?php echo $thum_img4_cap; ?></figcaption><?php endif; ?></figure></li>
-				<?php endif ?>
-				<?php if($thum_img5): ?>
-				<li><figure><img src="<?php echo $thum_img5[0]; ?>" alt="<?php the_title(); ?>_サムネイル"><?php if($thum_img5_cap): ?><figcaption><?php echo $thum_img5_cap; ?></figcaption><?php endif; ?></figure></li>
-				<?php endif ?>
-			</ul>
-			<?php else: ?>
-			<p data-role="noimg">No img</p>
-			<?php endif ?>
+			<?php echo do_shortcode( '[cft format=0]' ); ?>
 		</article>
 		<?php endwhile;endif; ?>
 		<?php
