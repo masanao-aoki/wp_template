@@ -1,8 +1,15 @@
 @charset "utf-8";
 
+@import url(http://fonts.googleapis.com/css?family=Days+One);
+
+@font-face {
+  font-family: 'fontello';
+  src: url('font/fontello.eot?85707168');
+  src: url('font/fontello.eot?85707168#iefix') format('embedded-opentype'),
+       url('font/fontello.svg?85707168#fontello') format('svg');
+}
 
 body {
-	background: #f0f0f0;
  }
 
 header[role="banner"] ,
@@ -12,6 +19,15 @@ header[role="banner"] ,
 [data-role="sidebar"] ,
 footer[role="contentinfo"] { clear: both; padding: 0 20px; }
 
+
+
+header[role="banner"] { position: relative; }
+header[role="banner"] h1 { float: left; font-family: 'Days One', sans-serif; font-size: 46px; }
+header[role="banner"] h1 a { color: #ff8c94; text-decoration: none; }
+header[role="banner"] h1 a span { color: #fead65; }
+header[role="banner"] p { float: left; }
+header[role="banner"] nav { float: right; }
+header[role="banner"] nav li { display: inline-block; }
 
 #contents { position: relative; }
 
@@ -25,8 +41,17 @@ footer[role="contentinfo"] { clear: both; padding: 0 20px; }
 	position: relative;
 	width: 200px;
 	margin: 10px;
-	border: 1px solid #ddd;
+	box-shadow:rgb(209, 209, 209) 4px 4px 0px 0px;
+	-webkit-box-shadow:rgb(209, 209, 209) 4px 4px 0px 0px;
+	-moz-box-shadow:rgb(209, 209, 209) 4px 4px 0px 0px;
+	transition: all 1s ease;
+    -webkit-transition: all .1s ease;
  }
+
+[role="main"] > article:hover {
+	transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+}
 
 [role="main"] > article header {
 	position: absolute;

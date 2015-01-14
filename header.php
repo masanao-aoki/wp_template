@@ -29,12 +29,13 @@
 <body <?php body_class(); ?>>
 
 	<header role="banner">
-		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">■■■■</a></h1>
-		<p>■■■■</p>
+		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>">ani<span>t</span>te</a></h1>
+		<p>アニメーションを使ったwebサイトのリンク集</p>
 		<nav role="navigation">
 			<ul>
-				<li><a>about</a></li>
-				<li><a>profile</a></li>
+				<li data-role="color-switch">color</li>
+				<li data-role="type-switch">type</li>
+				<li data-role="tags-switch">tags</li>
 			</ul>
 		</nav>
 	</header>
