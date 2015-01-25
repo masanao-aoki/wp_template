@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 	<main role="main">
+		<div class="inner">
 		<?php if(have_posts()):while(have_posts()):the_post();
 		$url = post_custom('url');
 		$details = post_custom('details');
@@ -19,6 +20,7 @@
 		?>
 
 		<article>
+			<?php echo do_shortcode( '[cft format=0]' ); ?>
 			<header>
 				<h2><?php if($url): ?><a href="<?php echo $url; ?>" target="_blank" onClick="ga('send', 'event', 'Link', 'click', '<?php the_title(); ?>');"><?php endif ?><?php the_title(); ?><?php if($url): ?></a><?php endif ?></h2>
 			<ul data-role="color">
@@ -43,7 +45,6 @@
 			</ul>
 			<?php the_tags('<ul data-role="tag"><li>','</li><li>','</li></ul>'); ?>
 			</header>
-			<?php echo do_shortcode( '[cft format=0]' ); ?>
 		</article>
 		<?php endwhile;endif; ?>
 		<?php
@@ -61,5 +62,6 @@
 				<li class="next_page"><?php next_posts_link('next'); ?></li>
 			</ul>
 		</nav>
+		</div>
 	</main>
 <?php get_footer(); ?>

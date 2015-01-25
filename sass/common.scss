@@ -1,0 +1,124 @@
+@import "compass/css3";
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Days+One);
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?92029939');
+  src: url('../font/fontello.eot?92029939#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?92029939') format('woff'),
+       url('../font/fontello.ttf?92029939') format('truetype'),
+       url('../font/fontello.svg?92029939#fontello') format('svg');
+}
+
+html { font-size: 62.5%; }
+body {
+	color: #666;
+}
+
+header[role="banner"] .inner,
+main[role="main"] .inner ,
+footer[role="contentinfo"] .inner {
+	width: 980px;
+	margin: 0 auto;
+}
+
+a { 
+	text-decoration: none;
+ }
+
+/* header */
+header[role="banner"] {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background: #fff;
+	h1 { 
+		float: left;
+		font-family: 'Days One', sans-serif;
+		font-size: 4.6rem;
+		padding: .2rem 0 0 0;
+		a {
+			color: #FF9900;	
+			span {
+				color: #FF4B3E;
+				font-size: 5.2rem;
+			}
+		}
+	}
+	p {
+			float: left;
+			padding: 2.6rem 2.6rem 0;
+	}
+	nav[role="navigation"] {
+		float: right;
+	}
+	nav[role="navigation"] li {
+		color: #fff;
+		position: relative;
+		float: left;
+		padding: 4rem 0 0 0;
+		background: #fcfcfc;
+		height: 2rem;
+		width: 6rem;
+		text-align: center;
+		&[data-role="color-switch"] {
+			background: #34B6C1;
+		}
+		&[data-role="type-switch"] {
+			background: #FF6030;
+		}
+		&[data-role="tags-switch"] {
+			background: #91E253;
+		}
+		&:before {
+			font-family: "fontello";
+			position: absolute;
+			top: 1.2rem;
+			left: 50%;
+			margin-left: -1rem;
+			font-size: 2rem;
+		}
+		&[data-role="color-switch"]:before {
+			content: "\e800";
+		}
+		&[data-role="type-switch"]:before {
+			content: "\e801";
+		}
+		&[data-role="tags-switch"]:before {
+			content: "\e802";
+		}
+	}	
+}
+/* gnav */
+#gnav {
+	clear: both;
+	display: none;
+}
+/* main */
+main[role="main"] {
+	clear: both;
+	padding: 80px 20px 20px;
+	overflow: hidden;
+	background: #FCFCFC;
+	&:before {
+		position: fixed;
+		top: 4.5rem;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0 auto;
+		display: block;
+		content: "";
+		width: 100%;
+		height: 10px;
+		background: #ccc;
+		@include border-radius(50%);
+		@include box-shadow(rgba(black, 0.2) 0 0 50px 3px);
+		z-index: 998;
+	}
+}

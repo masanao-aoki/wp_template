@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Days+One);
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?92029939");
+  src: url("../font/fontello.eot?92029939#iefix") format("embedded-opentype"), url("../font/fontello.woff?92029939") format("woff"), url("../font/fontello.ttf?92029939") format("truetype"), url("../font/fontello.svg?92029939#fontello") format("svg");
+}
+/* line 15, ../sass/common.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 16, ../sass/common.scss */
+body {
+  color: #666;
+}
+
+/* line 20, ../sass/common.scss */
+header[role="banner"] .inner,
+main[role="main"] .inner,
+footer[role="contentinfo"] .inner {
+  width: 980px;
+  margin: 0 auto;
+}
+
+/* line 27, ../sass/common.scss */
+a {
+  text-decoration: none;
+}
+
+/* header */
+/* line 32, ../sass/common.scss */
+header[role="banner"] {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+}
+/* line 40, ../sass/common.scss */
+header[role="banner"] h1 {
+  float: left;
+  font-family: 'Days One', sans-serif;
+  font-size: 4.6rem;
+  padding: .2rem 0 0 0;
+}
+/* line 45, ../sass/common.scss */
+header[role="banner"] h1 a {
+  color: #FF9900;
+}
+/* line 47, ../sass/common.scss */
+header[role="banner"] h1 a span {
+  color: #FF4B3E;
+  font-size: 5.2rem;
+}
+/* line 53, ../sass/common.scss */
+header[role="banner"] p {
+  float: left;
+  padding: 2.6rem 2.6rem 0;
+}
+/* line 57, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] {
+  float: right;
+}
+/* line 60, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] li {
+  color: #fff;
+  position: relative;
+  float: left;
+  padding: 4rem 0 0 0;
+  background: #fcfcfc;
+  height: 2rem;
+  width: 6rem;
+  text-align: center;
+}
+/* line 69, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] li[data-role="color-switch"] {
+  background: #34B6C1;
+}
+/* line 72, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] li[data-role="type-switch"] {
+  background: #FF6030;
+}
+/* line 75, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] li[data-role="tags-switch"] {
+  background: #91E253;
+}
+/* line 78, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] li:before {
+  font-family: "fontello";
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  margin-left: -1rem;
+  font-size: 2rem;
+}
+/* line 86, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] li[data-role="color-switch"]:before {
+  content: "\e800";
+}
+/* line 89, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] li[data-role="type-switch"]:before {
+  content: "\e801";
+}
+/* line 92, ../sass/common.scss */
+header[role="banner"] nav[role="navigation"] li[data-role="tags-switch"]:before {
+  content: "\e802";
+}
+
+/* gnav */
+/* line 98, ../sass/common.scss */
+#gnav {
+  clear: both;
+  display: none;
+}
+
+/* main */
+/* line 103, ../sass/common.scss */
+main[role="main"] {
+  clear: both;
+  padding: 80px 20px 20px;
+  overflow: hidden;
+  background: #FCFCFC;
+}
+/* line 108, ../sass/common.scss */
+main[role="main"]:before {
+  position: fixed;
+  top: 4.5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background: #ccc;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 50px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 50px 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 50px 3px;
+  z-index: 998;
+}
