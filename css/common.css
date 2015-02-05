@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Days+One);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 @font-face {
   font-family: 'fontello';
   src: url("../font/fontello.eot?92029939");
@@ -11,7 +11,32 @@ html {
 
 /* line 16, ../sass/common.scss */
 body {
-  color: #666;
+  color: #fff;
+  background: #000;
+}
+
+body:before {
+  display: block;
+  position: fixed;
+  top: -50px;
+  left: 0;
+  width: 80%;
+  height: 50px;
+  margin: 0 10%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #000;
+  content: "";
+  -webkit-box-shadow: 0 0 100px rgba(2,109,255,.8);
+  -moz-box-shadow: 0 0 100px rgba(2,109,255,.8);
+  box-shadow: 0 0 100px rgba(2,109,255,.8);
+  z-index: 0;
+ }
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* line 20, ../sass/common.scss */
@@ -20,127 +45,75 @@ main[role="main"] .inner,
 footer[role="contentinfo"] .inner {
   width: 980px;
   margin: 0 auto;
+  overflow: hidden;
 }
+
+/* header */
+
+header[role="banner"] {
+  text-align: center;
+  padding: 20px 0;
+}
+header[role="banner"] h1 a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* nav */
+nav[role="navigation"] {
+  border-top: 1px solid #525252;
+  border-bottom: 1px solid #0e0e0e;
+background: rgb(67,67,67); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(67,67,67,1) 0%, rgba(38,38,38,1) 50%, rgba(22,22,22,1) 51%, rgba(23,23,23,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(67,67,67,1)), color-stop(50%,rgba(38,38,38,1)), color-stop(51%,rgba(22,22,22,1)), color-stop(100%,rgba(23,23,23,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(67,67,67,1) 0%,rgba(38,38,38,1) 50%,rgba(22,22,22,1) 51%,rgba(23,23,23,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(67,67,67,1) 0%,rgba(38,38,38,1) 50%,rgba(22,22,22,1) 51%,rgba(23,23,23,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(67,67,67,1) 0%,rgba(38,38,38,1) 50%,rgba(22,22,22,1) 51%,rgba(23,23,23,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(67,67,67,1) 0%,rgba(38,38,38,1) 50%,rgba(22,22,22,1) 51%,rgba(23,23,23,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#434343', endColorstr='#171717',GradientType=0 ); /* IE6-9 */
+ }
+
+nav[role="navigation"] li { display: inline-block;  }
+
+.home main[role="main"] article {
+  width: 300px;
+  float: left;
+  margin: 40px 36px 0 0;
+  border: 1px solid #343434;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #151515;
+ }
+
+.home main[role="main"] article:nth-child(3n) {
+  margin: 40px 0 0;
+}
+
+.home main[role="main"] article ul {
+  padding: 10px;
+  background: #151515;
+  margin-bottom: 2px;
+}
+
+.home main[role="main"] article [data-role="post-data"] {
+background: rgb(62,62,62); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(62,62,62,1) 0%, rgba(73,73,73,1) 5%, rgba(43,43,43,1) 36%, rgba(37,37,37,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(62,62,62,1)), color-stop(5%,rgba(73,73,73,1)), color-stop(36%,rgba(43,43,43,1)), color-stop(100%,rgba(37,37,37,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(62,62,62,1) 0%,rgba(73,73,73,1) 5%,rgba(43,43,43,1) 36%,rgba(37,37,37,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(62,62,62,1) 0%,rgba(73,73,73,1) 5%,rgba(43,43,43,1) 36%,rgba(37,37,37,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(62,62,62,1) 0%,rgba(73,73,73,1) 5%,rgba(43,43,43,1) 36%,rgba(37,37,37,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(62,62,62,1) 0%,rgba(73,73,73,1) 5%,rgba(43,43,43,1) 36%,rgba(37,37,37,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e3e3e', endColorstr='#252525',GradientType=0 ); /* IE6-9 */
+
+ }
+
+.home main[role="main"] article [data-role="post-data"]{ padding: 10px; color: #999; }
+.home main[role="main"] article header h2 { text-align: left; margin: 12px 10px 0; padding-bottom: 12px; border-bottom: 1px solid #343434; font-size: 14px; color: #73bfe6; }
 
 /* line 27, ../sass/common.scss */
 a {
   text-decoration: none;
 }
 
-/* header */
-/* line 32, ../sass/common.scss */
-header[role="banner"] {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: #fff;
-}
-/* line 40, ../sass/common.scss */
-header[role="banner"] h1 {
-  float: left;
-  font-family: 'Days One', sans-serif;
-  font-size: 4.6rem;
-  padding: .2rem 0 0 0;
-}
-/* line 45, ../sass/common.scss */
-header[role="banner"] h1 a {
-  color: #FF9900;
-}
-/* line 47, ../sass/common.scss */
-header[role="banner"] h1 a span {
-  color: #FF4B3E;
-  font-size: 5.2rem;
-}
-/* line 53, ../sass/common.scss */
-header[role="banner"] p {
-  float: left;
-  padding: 2.6rem 2.6rem 0;
-}
-/* line 57, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] {
-  float: right;
-}
-/* line 60, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] li {
-  color: #fff;
-  position: relative;
-  float: left;
-  padding: 4rem 0 0 0;
-  background: #fcfcfc;
-  height: 2rem;
-  width: 6rem;
-  text-align: center;
-}
-/* line 69, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] li[data-role="color-switch"] {
-  background: #34B6C1;
-}
-/* line 72, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] li[data-role="type-switch"] {
-  background: #FF6030;
-}
-/* line 75, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] li[data-role="tags-switch"] {
-  background: #91E253;
-}
-/* line 78, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] li:before {
-  font-family: "fontello";
-  position: absolute;
-  top: 1.2rem;
-  left: 50%;
-  margin-left: -1rem;
-  font-size: 2rem;
-}
-/* line 86, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] li[data-role="color-switch"]:before {
-  content: "\e800";
-}
-/* line 89, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] li[data-role="type-switch"]:before {
-  content: "\e801";
-}
-/* line 92, ../sass/common.scss */
-header[role="banner"] nav[role="navigation"] li[data-role="tags-switch"]:before {
-  content: "\e802";
-}
 
-/* gnav */
-/* line 98, ../sass/common.scss */
-#gnav {
-  clear: both;
-  display: none;
-}
-
-/* main */
-/* line 103, ../sass/common.scss */
-main[role="main"] {
-  clear: both;
-  padding: 80px 20px 20px;
-  overflow: hidden;
-  background: #FCFCFC;
-}
-/* line 108, ../sass/common.scss */
-main[role="main"]:before {
-  position: fixed;
-  top: 4.5rem;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 10px;
-  background: #ccc;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 50px 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 50px 3px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 0 50px 3px;
-  z-index: 998;
-}

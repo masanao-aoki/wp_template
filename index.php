@@ -2,49 +2,21 @@
 	<main role="main">
 		<div class="inner">
 		<?php if(have_posts()):while(have_posts()):the_post();
-		$url = post_custom('url');
-		$details = post_custom('details');
-		$setsumei = post_custom('setsumei');
-		$main_img = wp_get_attachment_image_src(post_custom('main_img'),'medium' );
-		$main_img_cap = post_custom('main_img_cap');
 		$thum_img1 = wp_get_attachment_image_src(post_custom('thum_img1'),'medium' );
-		$thum_img1_cap = post_custom('thum_img1_cap');
 		$thum_img2 = wp_get_attachment_image_src(post_custom('thum_img2'),'medium' );
-		$thum_img2_cap = post_custom('thum_img2_cap');
-		$thum_img3 = wp_get_attachment_image_src(post_custom('thum_img3'),'medium' );
-		$thum_img3_cap = post_custom('thum_img3_cap');
-		$thum_img4 = wp_get_attachment_image_src(post_custom('thum_img4'),'medium' );
-		$thum_img4_cap = post_custom('thum_img4_cap');
-		$thum_img5 = wp_get_attachment_image_src(post_custom('thum_img5'),'medium' );
-		$thum_img5_cap = post_custom('thum_img5_cap');
 		?>
 
 		<article>
-			<?php echo do_shortcode( '[cft format=0]' ); ?>
+			<a href="<?php the_permalink(); ?>" onClick="ga('send', 'event', 'Link', 'click', '<?php the_title(); ?>')">
+			<p data-role="post-data"><?php echo get_the_date(); ?></p>
 			<header>
-				<h2><?php if($url): ?><a href="<?php echo $url; ?>" target="_blank" onClick="ga('send', 'event', 'Link', 'click', '<?php the_title(); ?>');"><?php endif ?><?php the_title(); ?><?php if($url): ?></a><?php endif ?></h2>
-			<ul data-role="color">
-				<?php
-				 $cats = get_the_category();
-				 foreach ($cats as $cat) {
-			 		if( $cat->parent == 17 ) {
-			 		echo '<li><a href="' . get_category_link($cat->cat_ID) . '" onClick="ga(\'send\', \'event\', \'color\', \'click\', '.$cat->cat_name.');">'.$cat->cat_name."</a></li>";
-			  		}
-				 }
-				?>
-			</ul>
-			<ul data-role="type">
-				<?php
-				 $cats = get_the_category();
-				 foreach ($cats as $cat) {
-			 		if( $cat->parent == 18 ) {
-			 		echo '<li><a href="' . get_category_link($cat->cat_ID) . '" onClick="ga(\'send\', \'event\', \'type\', \'click\', '.$cat->cat_name.');">'.$cat->cat_name."</a></li>";
-			  		}
-				 }
-				?>
-			</ul>
-			<?php the_tags('<ul data-role="tag"><li>','</li><li>','</li></ul>'); ?>
+				<h2><?php the_title(); ?></h2>
 			</header>
+				<ul data-role="article-thum">
+					<?php if(post_custom("thum_img1")): ?><li><img src='<?php echo $thum_img1[0]; ?>'></li><?php endif ?>
+					<?php if(post_custom("thum_img2")): ?><li><img src='<?php echo $thum_img2[0]; ?>'></li><?php endif ?>
+				</ul>
+			</a>
 		</article>
 		<?php endwhile;endif; ?>
 		<?php
