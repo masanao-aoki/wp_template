@@ -12,7 +12,8 @@ html {
 /* line 16, ../sass/common.scss */
 body {
   color: #fff;
-  background: #000;
+  background: #000 url(../images/001.png) no-repeat top center;
+  background-size: auto;
 }
 
 body:before {
