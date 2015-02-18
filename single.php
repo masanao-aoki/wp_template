@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-	<ol data-role="breadcrumb">
-		<li><a href="<?php bloginfo('url'); ?>">TOP</a></li>
-		<li><?php the_title(''); ?></li>
-	</ol>
 	<main role="main">
 		<div class="inner">
 		<?php if(have_posts()):while(have_posts()):the_post();
@@ -22,6 +18,14 @@
 			<p data-role="post-data"><?php echo get_the_date(); ?></p>
 			<header>
 				<h2><?php the_title(); ?></h2>
+				<ul>
+				<?php
+				 $cats = get_the_category();
+				 foreach ($cats as $cat) {
+			 		echo '<li><a href="' . get_category_link($cat->cat_ID) . '" onClick="ga(\'send\', \'event\', \'type\', \'click\, '.$cat->cat_name.');">[&nbsp;'.$cat->cat_name."&nbsp;]</a></li>";
+				 }
+				?>
+				</ul>
 			</header>
 				<ul>
 					<?php if(post_custom("thum_img1")): ?><li><img src='<?php echo $thum_img1[0]; ?>'></li><?php endif ?>
