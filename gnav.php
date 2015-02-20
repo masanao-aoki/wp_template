@@ -5,10 +5,6 @@
 		<li><a href="/">ミラプリを送る</a></li>
 	</ul>
 </nav>
-<ol data-role="breadcrumb">
-	<li><a href="<?php bloginfo('url'); ?>">TOP</a></li>
-	<li><?php the_title(''); ?></li>
-</ol>
 <nav data-role="category">
 	<h2>JOB検索</h2>
 	<?php

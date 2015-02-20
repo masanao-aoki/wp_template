@@ -113,14 +113,6 @@ main[role="main"] article {
   overflow: hidden;
   background: #151515;
  }
-.single main[role="main"] article {
-  float: none;
-  margin: 20px 0 20px 0;
- }
-
-.single main[role="main"] article img {
-  width: 100%;
- }
 
 main[role="main"] article:nth-child(3n) {
   margin: 20px 0 20px;
@@ -157,4 +149,59 @@ a {
   text-decoration: none;
 }
 
+.tablenav {
+  color: #73bfe6;
+  margin: 1em auto;
+  line-height:2em;
+  text-align:center;
+  clear: both;
+}
 
+a.page-numbers, .tablenav .current {
+  color: #73bfe6;
+  padding: 2px .4em;
+  text-decoration:none;
+  font-size:smaller;
+}
+
+
+.tablenav .current {
+  color: #BFA350;
+  border:solid 1px #404042;
+  font-weight:bold:
+}
+
+.tablenav .next, .tablenav .prev {
+  border:0 none;
+  background:transparent;
+  text-decoration:underline;
+  font-size:smaller;
+  font-weight:bold;
+}
+
+/* details */
+.single main[role="main"] article {
+  float: none;
+  margin: 20px 0 20px 0;
+ }
+
+.single main[role="main"] article header ul {
+  margin-bottom: 20px;
+}
+
+.single main[role="main"] article ul[data-role="photo"] {
+  float: left;
+  width: 600px;
+  padding: 0;
+}
+.single main[role="main"] article ul[data-role="photo"] li {
+  padding: 6px;
+  border: 1px solid #343434;
+  margin-bottom: 12px;
+}
+
+.single main[role="main"] article img {
+  width: 100%;
+ }
+
+.single main[role="main"] .article img { width: 50%; }

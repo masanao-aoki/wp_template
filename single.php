@@ -27,19 +27,25 @@
 				?>
 				</ul>
 			</header>
-				<ul>
+				<ul data-role="photo">
 					<?php if(post_custom("thum_img1")): ?><li><img src='<?php echo $thum_img1[0]; ?>'></li><?php endif ?>
 					<?php if(post_custom("thum_img2")): ?><li><img src='<?php echo $thum_img2[0]; ?>'></li><?php endif ?>
 				</ul>
-				<p><?php echo $job; ?></p>
+				<?php
+				 $cats = get_the_category();
+				 foreach ($cats as $cat) {
+			 		echo '<p id="'.$cat->slug.'">'.$cat->cat_name.'</p>';
+				 }
+				?>
+				<p><?php echo $comment; ?></p>
+				<p><?php echo $head; ?></p>
+				<p><?php echo $body; ?></p>
+				<p><?php echo $hand; ?></p>
+				<p><?php echo $belt; ?></p>
+				<p><?php echo $legs; ?></p>
+				<p><?php echo $foot; ?></p>
 		</article>
 		<?php endwhile;endif; ?>
-		<nav id="nav-below">
-			<ul>
-				<li class="previous_page"><?php previous_posts_link('prev'); ?></li>
-				<li class="next_page"><?php next_posts_link('next'); ?></li>
-			</ul>
-		</nav>
 		</div>
 	</main>
 <?php get_footer(); ?>
