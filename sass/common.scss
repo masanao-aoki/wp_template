@@ -1,49 +1,19 @@
-@import "compass/css3";
-@charset "utf-8";
-
-@import url(http://fonts.googleapis.com/css?family=Days+One);
-
-@font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello.eot?92029939');
-  src: url('../font/fontello.eot?92029939#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff?92029939') format('woff'),
-       url('../font/fontello.ttf?92029939') format('truetype'),
-       url('../font/fontello.svg?92029939#fontello') format('svg');
-}
-
-html { font-size: 62.5%; }
-body {
-	color: #666;
-}
-
-header[role="banner"] .inner,
-main[role="main"] .inner ,
-footer[role="contentinfo"] .inner {
-	width: 980px;
-	margin: 0 auto;
-}
-
-a { 
-	text-decoration: none;
- }
-
 /* header */
 header[role="banner"] {
-	overflow: hidden;
-	position: fixed;
-	top: 0;
 	left: 0;
 	width: 100%;
+	overflow: hidden;
 	z-index: 999;
 	background: #fff;
-	h1 { 
+	position: fixed;
+	h1 {
+		float: left;
 		float: left;
 		font-family: 'Days One', sans-serif;
 		font-size: 4.6rem;
 		padding: .2rem 0 0 0;
 		a {
-			color: #FF9900;	
+			color: #000;
 			span {
 				color: #FF4B3E;
 				font-size: 5.2rem;
@@ -92,33 +62,5 @@ header[role="banner"] {
 		&[data-role="tags-switch"]:before {
 			content: "\e802";
 		}
-	}	
-}
-/* gnav */
-#gnav {
-	clear: both;
-	display: none;
-}
-/* main */
-main[role="main"] {
-	clear: both;
-	padding: 80px 20px 20px;
-	overflow: hidden;
-	background: #FCFCFC;
-	&:before {
-		position: fixed;
-		top: 4.5rem;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		margin: 0 auto;
-		display: block;
-		content: "";
-		width: 100%;
-		height: 10px;
-		background: #ccc;
-		@include border-radius(50%);
-		@include box-shadow(rgba(black, 0.2) 0 0 50px 3px);
-		z-index: 998;
 	}
 }

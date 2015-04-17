@@ -1,0 +1,30 @@
+{
+    "sort-order": [ [
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left"
+    ]],
+    "remove-empty-rulesets": true,
+    "always-semicolon": true,
+    "color-case": "lower",
+    "block-indent": "\t",
+    "color-shorthand": false,
+    "element-case": "lower",
+    "leading-zero": true,
+    "quotes": "single",
+    "space-before-colon": "",
+    "space-after-colon": " ",
+    "space-before-combinator": " ",
+    "space-after-combinator": " ",
+    "space-between-declarations": " ",
+    "space-before-opening-brace": " ",
+    "space-after-opening-brace": " ",
+    "space-after-selector-delimiter": " ",
+    "space-before-selector-delimiter": " ",
+    "space-before-closing-brace": " ",
+    "tab-size": true,
+    "unitless-zero": true,
+    "vendor-prefix-align": true
+}
